@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dang nhap.css">
+</head>
+<body>
+    <div class="main">
+        <div id="bg">
+            <h1>Login</h1>
+            <input id="Username" type="text" placeholder="Username/Email/Phone" aria-label="default input example">
+            <input id="password" type="password" placeholder="Password" aria-label="default input example">
+            <button id="confirm" >Log In</button>
+            <a href="#" class="link">Forgot Password or Username</a>
+                        <button id="signup" >Sign Up</button>
+            <div class="line"></div>
+
+            <div id="alert"></div>
+        </div>
+    </div>
+</body>
+<script>
+    var login = document.getElementById("confirm");
+    login.addEventListener("click", function () {
+    var Username = document.getElementById("Username").value;
+    var Password = document.getElementById("password").value;
+    if (Username ==="" || Password ==="") {
+         document.getElementById("alert").innerText=("You must enter all.");
+    }
+    else{
+        document.getElementById("alert").innerText=("");
+        window.location.href = "Home.html";
+    
+    }
+
+    })
+</script>
+</html>
